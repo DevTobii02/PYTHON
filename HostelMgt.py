@@ -87,14 +87,3 @@ class Email(HostelManagement):
 Email =  LastName  + FirstName + "@Uniosun.edu.ng"
 print(Email)
 print(date)
-
-
-def more_num(A, B = 7, C = 10):
-    print("a is ", A, "and b is ", B, "While c is ",  C)
-    more_num(3, 7)
-    more_num(23, c = 17)
-    more_num(c = 40, a = 80)    
-
-
-
-#print("Hostel Name: ", random.choice(FemaleHostels))  
