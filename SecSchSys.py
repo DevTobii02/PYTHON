@@ -22,7 +22,7 @@ class Name(Senior_Secondary_School):
         super().__init__(Department, Teachers, Name, Students, Subjects, Addmission_Number)
 Last_Name = input("Enter Your Last Name: ")
 First_Name = input("Enter Your First Name:")
-Middle_Name = input("Enter Your Middle Name: ")  
+Middle_Name = input("Enter Your Middle Name: ") 
 class Students(Senior_Secondary_School):
     def __init__(self, Department, Teachers, Students, Science_Students, Arts_Students, Commercial_Students, Addmission_Number, email) -> None:
         super().__init__(Department, Teachers, Students, Addmission_Number, email) 
@@ -31,7 +31,7 @@ class addmission_number(Senior_Secondary_School):
         super().__init__(Department, Teachers, Students, Subjects, Addmission_Number)
         self.addmission_number = addmission_number
 addmission_number = (1 , 100)
-addmission_number = int(input("Enter Your Addmission Number: "))        
+addmission_number = int(input("Enter Your Addmission Number: ")) # Takes In Students Addmission Number
 class email(Senior_Secondary_School):
     def __init__(self, Department, Teachers, Students, Subjects, addmission_number, email) -> None:
         super().__init__(Department, Teachers, Students, Subjects, addmission_number, email)
@@ -49,9 +49,9 @@ if dept == "Science":
     print(addmission_number)
     print(email)
     for a in Science_Subjects:
-        print(a)
+        print(a) # Display Science Subjects 
     for b in Science_Teachers:
-        print(b)    
+        print(b) # Display Science Teachers 
     print(len(Science_Subjects))
     print(len(Science_Teachers))
 elif dept == "Arts":
@@ -59,9 +59,9 @@ elif dept == "Arts":
     print(addmission_number)
     print(email)
     for c in Arts_Subjects:
-        print(c)
+        print(c) # Display Arts Subjects 
     for d in Arts_Teachers:
-        print(d)    
+        print(d) # Display Arts Teachers    
     print(len(Arts_Teachers))
     print(len(Arts_Subjects))
 elif dept == "Commercial":
@@ -69,10 +69,12 @@ elif dept == "Commercial":
     print(addmission_number)
     print(email)
     for e in Commercial_Subjects:
-        print(e)
+        print(e) # Display Commmercial Subjects
     for f in Commercial_Teachers:
-        print(f)    
+        print(f) # Display Commercial Teachers 
     print(len(Commercial_Teachers))
     print(len(Commercial_Subjects))
 else:
     print("Try Again")   
+
+    
