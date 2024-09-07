@@ -16,7 +16,7 @@ class Products(PRODUCTS):
 import datetime
 date = datetime.datetime.now()
 print(date)
-Products = input("Enter Your Product: ")
+Products = input("Enter Your Product: ")  # Choose From Range Of Products
 if Products == "Dangote":
     print("Thanks For Choosing Dangote")
 elif Products == "Golden Penny":
@@ -26,7 +26,7 @@ elif Products == "Kellogs":
 elif Products == "Nasco":
     print("Thanks For Choosing Nasco")
 else:
-    print("Not a Product Try Again")    
+    print("Not a Product Try Again")     
 class ProductsName(PRODUCTS):
     def __init__(self, Products, ProductName, DangoteProducts,  ProductsPrice, Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
@@ -34,7 +34,7 @@ class ProductsName(PRODUCTS):
 DangoteProducts = ["Dangote Sugar", "Dangote Salt", "Dangote Spaghetti", "Dangote Noodles"]
 if Products == "Dangote":
     for a in DangoteProducts:
-        print(a)
+        print(a) # Display Products Under Dangote
 class ProductsPrice(PRODUCTS):
     def __init__(self, Products, ProductName, ProductsPrice, DangoteSugarPrice, DangoteSaltPrice, DangoteSpaghettiPrice, DangoteNoodlesPrice,  Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
@@ -54,7 +54,7 @@ class ProductsName(PRODUCTS):
 GoldenPennyProducts = ["Golden Penny Noodles", "Golden Penny Spaghetti", "Golden Penny Sugar", "Golden Penny Spread"]
 if Products == "Golden Penny":
     for b in GoldenPennyProducts:
-        print(b)
+        print(b) # Display Golden Penny Products
 class ProductsPrice(PRODUCTS):
     def __init__(self, Products, ProductName, ProductsPrice, GoldenPennyNoodlesPrice, GoldenPennySpaghettiPrice, GoldenPennySugarPrice, GoldenPennySpreadPrice, Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
@@ -72,19 +72,21 @@ class ProducstName(PRODUCTS):
     def __init__(self, Products, ProductName, KellogsProducts, ProductsPrice, Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
         self.KellogsProducts = KellogsProducts
-KellogsProducts = ["Kellogs Coco Pops", "Kellogs Corn Flakes", "Kellogs Frosties"]
+KellogsProducts = ["Kellogs Coco Pops", "Kellogs Corn Flakes", "Kellogs Frosties", "Kellogs Rice Cripses"]
 if Products == "Kellogs":
     for c in KellogsProducts:
-        print(c)
+        print(c) # Display Kellogs Products
 class ProductsPrice(PRODUCTS):
-    def __init__(self, Products, ProductName, ProductsPrice,KellogosCocoPopsPrice, KellogsRiceCripsesPrice, KellogsCornFlakesPrice,  Quantity, Attendants) -> None:
+    def __init__(self, Products, ProductName, ProductsPrice,KellogosCocoPopsPrice, KellogsRiceCripsesPrice, KellogsCornFlakesPrice, KellogsFrostiesPrice,   Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
         self.KellogosCocoPopsPrice = KellogosCocoPopsPrice
         self.KellogsRiceCripsesPrice = KellogsRiceCripsesPrice
         self.KellogsCornFlakesPrice = KellogsCornFlakesPrice
+        self.KellogsFrostiesPrice = KellogsFrostiesPrice
 KellogosCocoPopsPrice = 150
 KellogsRiceCripsesPrice = 200
 KellogsCornFlakesPrice = 250
+KellogsFrostiesPrice = 250 
 class ProductsName(PRODUCTS):
     def __init__(self, Products, ProductName, NascoProducts,  ProductsPrice, Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
@@ -99,7 +101,7 @@ NascoCornFlakesPrice = 200
 NascoGoldenMornPrice = 300
 if Products == "Nasco":
     for d in NascoProducts:
-        print(d)
+        print(d) # Display Nasco Products 
 ProductsPrice = input("Enter Product Type: ")
 if ProductsPrice == "Dangote Sugar":
     print("Price : ", DangoteSugarPrice)
@@ -123,6 +125,8 @@ elif ProductsPrice == "Kellogs Rice Cripses":
     print("Price :", KellogsRiceCripsesPrice)
 elif ProductsPrice == "Kellogs Corn Flakes":
     print("Price :", KellogsCornFlakesPrice) 
+elif ProductsPrice == "Kellogs Frosties":
+    print("Price: ", KellogsFrostiesPrice)    
 elif ProductsPrice == "Nasco Corn Flakes":
     print("Price :", NascoCornFlakesPrice)
 elif ProductsPrice == "Nasco Golden Morn":
@@ -133,11 +137,12 @@ class Quantity(PRODUCTS):
     def __init__(self, Products, ProductName, ProductsPrice, Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
         self.Quantity = Quantity
-Quantity = int(input("Enter Your Quantity: ")) 
-def Total(ProductsPrice):
-    total = Quantity * {Total}
-    return total 
-print(Total(ProductsPrice))  
+Quantity = int(input("Enter Your Quantity: "))
+Price = int(input("Enter Product Price: ")) 
+def Total():
+    total = Quantity * Price
+    return total
+print(Total())
 import random
 class Attendants(PRODUCTS):
     def __init__(self, Products, ProductName, ProductsPrice, Quantity, Attendants, MaleAttendants, FemaleAttendants) -> None:
@@ -153,7 +158,6 @@ FemaleAttendant = random.choice(FemaleAttendants)
 print("Checked By:", MaleAttendant)
 print("Packaged By: ", FemaleAttendant)
 print(date)
-
 
 
 
