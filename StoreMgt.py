@@ -108,41 +108,41 @@ if ProductsPrice == "Dangote Sugar":
 elif ProductsPrice == "Dangote Salt":
     print("Price : ", DangoteSaltPrice)
 elif ProductsPrice == "Dangote Spaghetti":
-    print("Price :", DangoteSpaghettiPrice)
+    print("Price :", DangoteSpaghettiPrice) 
 elif ProductsPrice == "Dangote Noodles":
     print("Price :", DangoteNoodlesPrice) 
 elif ProductsPrice == "Golden Penny Noodles":
-    print("Price : ", GoldenPennyNoodlesPrice)
+    print("Price : ", GoldenPennyNoodlesPrice) 
 elif ProductsPrice == "Golden Penny Spaghetti":
-    print("Price :", GoldenPennySpaghettiPrice)
+    print("Price :", GoldenPennySpaghettiPrice) 
 elif ProductsPrice == "Golden Penny Sugar":
-        print("Price :", GoldenPennySugarPrice)
+        print("Price :", GoldenPennySugarPrice) 
 elif ProductsPrice == "Golden Penny Spread":
-    print("Price : ", GoldenPennySpreadPrice)
+    print("Price : ", GoldenPennySpreadPrice) 
 elif ProductsPrice == "Kellogs Coco Pops":
-    print("Price :", KellogosCocoPopsPrice)
-elif ProductsPrice == "Kellogs Rice Cripses":
-    print("Price :", KellogsRiceCripsesPrice)
+    print("Price :", KellogosCocoPopsPrice) 
+elif ProductsPrice == "Kellogs Rice Cripses": 
+    print("Price :", KellogsRiceCripsesPrice) 
 elif ProductsPrice == "Kellogs Corn Flakes":
     print("Price :", KellogsCornFlakesPrice) 
 elif ProductsPrice == "Kellogs Frosties":
-    print("Price: ", KellogsFrostiesPrice)    
+    print("Price: ", KellogsFrostiesPrice)     
 elif ProductsPrice == "Nasco Corn Flakes":
-    print("Price :", NascoCornFlakesPrice)
-elif ProductsPrice == "Nasco Golden Morn":
-    print("Price :", NascoGoldenMornPrice)
+    print("Price :", NascoCornFlakesPrice) 
+elif ProductsPrice == "Nasco Golden Morn3":
+    print("Price :", NascoGoldenMornPrice) 
 else:
     print("Not a Product Type")
 class Quantity(PRODUCTS):
     def __init__(self, Products, ProductName, ProductsPrice, Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
         self.Quantity = Quantity
-Quantity = int(input("Enter Your Quantity: "))
+Quantity = int(input("Enter Your Quantity: ")) # Enter How Many Pieces You're getting 
 Price = int(input("Enter Product Price: ")) 
 def Total():
     total = Quantity * Price
-    return total
-print(Total())
+    return total 
+print(Total()) # Displays Total Price Of Items Got 
 import random
 class Attendants(PRODUCTS):
     def __init__(self, Products, ProductName, ProductsPrice, Quantity, Attendants, MaleAttendants, FemaleAttendants) -> None:
@@ -158,6 +158,3 @@ FemaleAttendant = random.choice(FemaleAttendants)
 print("Checked By:", MaleAttendant)
 print("Packaged By: ", FemaleAttendant)
 print(date)
-
-
-
