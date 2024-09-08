@@ -1,1 +1,2 @@
-class Hospital_Management
+class Hospital_Management:
+    
