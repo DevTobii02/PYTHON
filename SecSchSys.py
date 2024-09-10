@@ -7,7 +7,7 @@ class Senior_Secondary_School:
         self.Students = Students
         self.Subjects = Subjects
         self.Addmission_Number = Addmission_Number 
-        self.email = Students+'SecSch'+'@kfc.edu.ng'
+        self.email = Last_Name + First_Name + 'SecSch'+'@kfc.edu.ng'
 class Department(Senior_Secondary_School):
     def __init__(self, Department, Teachers, Students, Addmission_Number, Science,  Arts, Commercial):
         super().__init__(Department, Teachers, Students, Addmission_Number)
