@@ -38,7 +38,6 @@ if Products == "Dangote":
 class ProductsPrice(PRODUCTS):
     def __init__(self, Products, ProductName, ProductsPrice, DangoteSugarPrice, DangoteSaltPrice, DangoteSpaghettiPrice, DangoteNoodlesPrice,  Quantity, Attendants) -> None:
         super().__init__(Products, ProductName, ProductsPrice, Quantity, Attendants)
-        self.ProductPrice = ProductsPrice
         self.DangoteSugarPrice = DangoteSugarPrice
         self.DangoteSaltPrice = DangoteSaltPrice
         self.DangoteSpaghettiPrice = DangoteSpaghettiPrice
