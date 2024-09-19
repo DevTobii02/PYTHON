@@ -3,14 +3,15 @@ import datetime
 date = datetime.datetime.now()
 print(date)
 class Hospital_Management:
-    def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data) -> None:
+    def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Complain_Section) -> None:
         self.Medical_Staffs = Medical_Staffs
         self.Non_Medical_Staffs = Non_Medical_Staffs
         self.Patients_Category = Patients_Category
         self.Patients_Data = Patients_Data 
+        self.Complain_Section = Complain_Section
 class Medical_Staffs(Hospital_Management):
-    def __init__(self, Medical_Staffs, General_Doctors, Pediatrics, Nurses, Surgeon, Specialist_Doctors, Gyneacologist,  Non_Medical_Staffs, Patients_Category, Patients_Data) -> None:
-        super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data)  
+    def __init__(self, Medical_Staffs, General_Doctors, Pediatrics, Nurses, Surgeon, Specialist_Doctors, Gyneacologist,  Non_Medical_Staffs, Patients_Category, Patients_Data, Complain_Section) -> None:
+        super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Complain_Section)  
         self.General_Doctors = General_Doctors
         self.Pediatrics = Pediatrics
         self.Nurses = Nurses
@@ -20,12 +21,12 @@ class Medical_Staffs(Hospital_Management):
 Gyneacologist = ["Pregnancy",  "Ante-Natal", "Child Birth", "Delivery"]
 Surgeon = ["Operations"]
 Specialist_Doctors = ["Kidney Doctors", "Heart Doctors", "Skin Specialist"]   
-Pediatrics = ["Children from Childbirth - 5 Years Of Age "]     
+Pediatrics = ["Children from Childbirth - 4 Years Of Age "]     
 Nurses = ["Auxillary Nurses, Matrons"]
 General_Doctors = ["Malaria", "Typhoid", "e.t.c"]
 class Non_Medical_Staffs(Hospital_Management):
-    def __init__(self, Medical_Staffs, Non_Medical_Staffs, Cleaners, Drivers, Chef, Accountant, Receiptionist,  Patients_Category, Patient_Data) -> None:
-        super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patient_Data)
+    def __init__(self, Medical_Staffs, Non_Medical_Staffs, Cleaners, Drivers, Chef, Accountant, Receiptionist,  Patients_Category, Patient_Data, Complain_Section) -> None:
+        super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patient_Data, Complain_Section)
         self.Cleaners = Cleaners
         self.Drivers = Drivers
         self.Chef = Chef
@@ -36,17 +37,17 @@ Drivers = ["Ambulance", "Errands", "Drugs PickUp"]
 Chef = ["In Charge Of Addmitted Patients Feeding"] 
 Accountant = ["Finance Of The Hospital"]
 Receiptionist = ["Attends and Directs Patients To Rightful Doctors"]
-class Patient_Category(Hospital_Management):
-    def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Infants, Children, Teenagers, Adult, Elderly, Patients_Data) -> None:
-        super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data)
-        self.Infants = Infants
-        self.Children = Children
-        self.Teenagers = Teenagers
-        self.Adult = Adult
-        self.Elderly = Elderly
+#class Patient_Category(Hospital_Management):
+    #def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Infants, Children, Teenagers, Adult, Elderly, Patients_Data) -> None:
+        #super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data)
+        #self.Infants = Infants
+        #self.Children = Children
+        #self.Teenagers = Teenagers
+        #self.Adult = Adult
+        #self.Elderly = Elderly
 class Patients_Data(Hospital_Management):
-    def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Name, Age, Date_Of_Birth, Nationality, State_Of_Origin, Card_Number, Blood_Group, Genotype, Email, Phone_Number, Residence) -> None:
-        super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data)        
+    def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Name, Age, Date_Of_Birth, Nationality, State_Of_Origin, Card_Number, Blood_Group, Genotype, Email, Phone_Number, Residence, Complain_Section) -> None:
+        super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Complain_Section)        
         self.Name = Name
         self.Age = Age
         self.Date_Of_Birth = Date_Of_Birth
@@ -60,6 +61,18 @@ class Patients_Data(Hospital_Management):
         self.Residence = Residence
 Name = input("Name: ") 
 Age = int(input("Age: "))
+if Age >= 0 and Age <= 4:
+    print("Infant")
+    for a in Pediatrics:
+        print(a)
+elif Age >= 5 and Age <= 12:
+    print("Children")
+elif Age >= 13 and Age <= 17:
+    print("Teenager")
+elif Age >= 18 and Age <= 65:
+    print("Adult")
+else:
+    print("Elderly")          
 Date_Of_Birth = input("Date Of Birth: ")
 Nationality = input("Nationality: ") 
 State_Of_Origin = input("State Of Origin: ")
@@ -69,6 +82,13 @@ Genotype = input("Genotype: ")
 Email = input("Email: ")
 Phone_Number = int(input("Phone Number: "))
 Residence = input("Residence: ")
+class Complain_Section(Hospital_Management):
+    def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Complain_Section) -> None:
+        super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Complain_Section)
+        self.Complain = []
+        
+import json
+import sqlite3
 print(date)
 
 """
@@ -143,4 +163,14 @@ Next_Of_Kin_Age = int(input("Age: "))
 Next_Of_Kin_Address = input("Address: ")
 Next_Of_Kin_Phone_Number = int(input("Phone Number: "))
 Next_Of_Kin_Relationship_To_Patient = input("Relationship To Patient: ")
+
+#class Patient_Category(Hospital_Management):
+    #def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Infants, Children, Teenagers, Adult, Elderly, Patients_Data) -> None:
+        #super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data)
+        #self.Infants = Infants
+        #self.Children = Children
+        #self.Teenagers = Teenagers
+        #self.Adult = Adult
+        #self.Elderly = Elderly
+
 """
