@@ -81,7 +81,7 @@ class ProductsPrice(PRODUCTS):
         self.KellogosCocoPopsPrice = KellogosCocoPopsPrice
         self.KellogsRiceCripsesPrice = KellogsRiceCripsesPrice
         self.KellogsCornFlakesPrice = KellogsCornFlakesPrice
-        self.KellogsFrostiesPrice = KellogsFrostiesPrice
+        self.KellogsFrostiesPrice = KellogsFrostiesPrice        
 KellogosCocoPopsPrice = 150
 KellogsRiceCripsesPrice = 200
 KellogsCornFlakesPrice = 250
