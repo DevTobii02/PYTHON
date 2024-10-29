@@ -1,29 +1,8 @@
 print("Welcome To Newgate Hospital")
 import datetime
 date = datetime.datetime.now()
-print(date) 
-class Hospital_Management:
-    def __init__(self, Non_Medical_Staffs, Medical_Staffs, Patients_Data, Patients_Category, ComplainSection_and_FeedBack) -> None:
-        self.Non_Medical_Staffs = Non_Medical_Staffs
-        self.Medical_Staffs = Medical_Staffs
-        self.Patients_Data = Patients_Data
-        self.Patients_Category = Patients_Category
-        self.ComplainSection_and_FeedBack = ComplainSection_and_FeedBack
-class Non_Medical_Staffs(Hospital_Management): 
-    Non_Medical_Staffs = ("Accountant", "Cleaner", "Receptionist", "Driver")
-    for a in Non_Medical_Staffs:
-        print(a)
-class Medical_Staffs(Hospital_Management):
-    Medical_Staffs = ("Paediatrics", "General Doctors", "Nurses", "Matrons")
-    for b in Medical_Staffs:
-        print(b)
-class Patient_Category(Hospital_Management):
-    Patient_Category = input("")
-#print(date) 
+print(date)
 
-
-
-"""
 print("Welcome To Newgate Hospital ")
 import datetime
 date = datetime.datetime.now()
@@ -63,9 +42,6 @@ Drivers = ["Ambulance", "Errands", "Drugs PickUp"]
 Chef = ["In Charge Of Addmitted Patients Feeding"] 
 Accountant = ["Finance Of The Hospital"]
 Receiptionist = ["Attends and Directs Patients To Rightful Doctors"] 
-
-
-
 class Patient_Category(Hospital_Management):
     def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Infants, Children, Teenagers, Adult, Elderly, Patients_Data) -> None:
         super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data)
@@ -74,8 +50,6 @@ class Patient_Category(Hospital_Management):
         self.Teenagers = Teenagers
         self.Adult = Adult
         self.Elderly = Elderly
-
-        
 class Patients_Data(Hospital_Management):
     def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Name, Age, Date_Of_Birth, Nationality, State_Of_Origin, Card_Number, Blood_Group, Genotype, Email, Phone_Number, Residence, Complain_Section) -> None:
         super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Complain_Section)        
@@ -107,7 +81,7 @@ else:
 Date_Of_Birth = input("Date Of Birth: ")
 Nationality = input("Nationality: ") 
 State_Of_Origin = input("State Of Origin: ")
-Card_Number = int(input("Card Number: ")) 
+Card_Number = input("Card Number: ")
 Blood_Group = input("Blood Group: ")
 Genotype = input("Genotype: ")
 Email = input("Email: ")
@@ -118,16 +92,11 @@ class Complain_Section(Hospital_Management):
         super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data, Complain_Section)
         self.Complain = []
         
-import json
-import sqlite3
 print(date) 
-
-
-
 print("Welcome To Newgate Medical Center")
 class Hospital_Management:
     def __init__(self, Staffs, Patients_Category, Patients_Data) -> None:
-        self.Staffs = 
+        self.Staffs = Staffs
         self.Patients_Category  = Patients_Category
         self.Patients_Data = Patients_Data
 class Staffs(Hospital_Management):
@@ -195,7 +164,6 @@ Next_Of_Kin_Age = int(input("Age: "))
 Next_Of_Kin_Address = input("Address: ")
 Next_Of_Kin_Phone_Number = int(input("Phone Number: "))
 Next_Of_Kin_Relationship_To_Patient = input("Relationship To Patient: ")
-
 class Patient_Category(Hospital_Management):
     def __init__(self, Medical_Staffs, Non_Medical_Staffs, Patients_Category, Infants, Children, Teenagers, Adult, Elderly, Patients_Data) -> None:
         super().__init__(Medical_Staffs, Non_Medical_Staffs, Patients_Category, Patients_Data)
@@ -204,4 +172,3 @@ class Patient_Category(Hospital_Management):
         self.Teenagers = Teenagers
         self.Adult = Adult
         self.Elderly = Elderly
-"""
